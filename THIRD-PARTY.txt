@@ -25,3 +25,8 @@ Copyright (C) 2026 namazso. The driver distributed by that installer is GPL-2.0-
 with the upstream device IO-control linking exception. See ThirdParty/PawnIO/COPYING.txt.
 Installer: https://github.com/namazso/PawnIO.Setup/releases/tag/2.2.0
 Driver source and linking exception: https://github.com/namazso/PawnIO/tree/2.2.0
+
+The PERF installer (MSI) embeds WixToolset.Dtf.CustomAction and WixToolset.Dtf.WindowsInstaller 5.0.2
+to show the Windows folder picker during setup. They are not installed with PERF.
+Copyright (c) .NET Foundation and contributors. Licensed under the Microsoft Reciprocal License (MS-RL).
+https://github.com/wixtoolset/wix/blob/main/LICENSE.TXT

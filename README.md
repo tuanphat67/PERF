@@ -1,4 +1,4 @@
-# PERF 0.3.7
+# PERF 0.3.8
 
 <p align="center">
   <img src="docs/images/hero.jpg" alt="PERF with its five themes: PERF Classic, Cosmos, Astronaut, Shinobi and Night Racer" width="100%">
@@ -74,10 +74,26 @@ Switch under **Settings → Appearance**, preview instantly, then click **Save s
 
 - **Chart range:** above the chart on the Overview page, pick **1 min**, **10 min** or **1 hour**. PERF keeps the last hour of every sensor in memory from the moment it opens, even while it sits in the tray.
 - **Record:** click **● Record** to start writing every sensor to a CSV file once per sample. The button turns into **■ Stop** with the elapsed time; recording keeps going while PERF is in the tray. Click **Stop** when you're done.
-- **Where the file goes:** `Documents\PERF\PERF-<date>-<time>.csv`. Click **Open folder** under the chart to find it.
+- **Where the file goes:** `Documents\PERF\PERF-<date>-<time>.csv` by default. Click **Open folder** under the chart to find it, or pick another folder under **Settings → Storage**.
 - **File format:** one row per sample with `Time`, `Elapsed (s)` and one column per sensor, named *Device | Sensor (unit)*. Numbers use a dot as the decimal separator. An empty cell means the sensor had no reading at that moment, which is different from a real 0. Sensors that appear after you start recording are not added.
 
 > Tip: record a few minutes of the same game before and after cleaning your fans or repasting the CPU, then compare the `CPU Package (°C)` columns.
+
+## Storage locations
+
+Open **Settings → Storage** to choose where PERF saves files, then click **Save settings**.
+
+| What | Default | Can change |
+|---|---|---|
+| Session recordings (CSV) | `Documents\PERF` | ✅ Saved directly in the folder you pick |
+| Downloaded update installers | `%LocalAppData%\PERF\updates` | ✅ Saved in a `PERF-updates` subfolder of the folder you pick |
+| Settings and CPU cool-down sessions | `%LocalAppData%\PERF` | ❌ Fixed, so PERF can find them at startup and restore your power plan after a crash |
+
+- PERF checks that it can write to a folder before accepting it.
+- **Use default** switches back to the default location.
+- Old update installers are cleaned up only inside the `PERF-updates` subfolder, never in the folder you picked itself.
+- Changing a folder doesn't move files that are already saved.
+- **Settings → Restore defaults** also resets both folders.
 
 ## Top apps
 
@@ -123,11 +139,18 @@ A small always-on-top window in the corner of your screen. By default it shows C
 
 ## Install in one minute
 
-1. Download `PERF-<version>-x64.msi` from [**Releases**](https://github.com/tuanphat67/PERF/releases/latest).
-2. Run the installer. The .NET runtime is bundled, so nothing else is needed.
-3. Launch **PERF** from the Start menu. The main window and the mini overlay appear right away.
+<img src="docs/images/installer.png" alt="PERF installer with install folder and Browse button" width="420" align="right">
 
-**Advanced sensors (recommended):** the installer includes the signed **PawnIO** driver, which unlocks extra CPU temperature and power readings. Accept the UAC prompt when asked. If you skipped it, open **Settings → Sensor sources**, click **Install bundled PawnIO**, then quit and reopen PERF.
+1. Download `PERF-<version>-x64.msi` from [**Releases**](https://github.com/tuanphat67/PERF/releases/latest).
+2. Run the installer. It installs for your Windows account only, and the .NET runtime is bundled, so nothing else is needed.
+3. **Choose where to install:** keep the default `%LocalAppData%\Programs\PERF` or click **Browse...** to pick another folder (for example on drive D:) in the standard Windows folder picker. Pick a folder your account can write to; Program Files needs administrator rights.
+4. On the last screen, leave **Open PERF now** ticked to start PERF right away, or untick it and launch **PERF** from the Start menu later.
+
+<br clear="right">
+
+Updates, including one-click updates from inside PERF, install to the same folder you chose. Running the installer again on a PC that already has PERF offers **Repair** or **Remove**.
+
+**Advanced sensors (recommended):** the installer includes the signed **PawnIO** driver, which unlocks extra CPU temperature and power readings. Keep **Install the PawnIO driver** ticked on the first screen and accept the UAC prompt when asked. The option is hidden when PawnIO is already installed. If you skipped it, open **Settings → Sensor sources**, click **Install bundled PawnIO**, then quit and reopen PERF.
 
 **Update:** the version tag at the bottom of the sidebar shows **Latest** or **Update to x.y.z**. When PERF finds a new version in the background it also shows a notification; click it to open the update dialog. The dialog lists **What's new** in your language. Click **Update now**: PERF downloads the new installer from GitHub, checks its SHA-256, closes cleanly, installs and reopens. You can also quit PERF and run a newer installer by hand. Your settings are kept either way.
 
