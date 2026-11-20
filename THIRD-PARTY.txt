@@ -1,0 +1,27 @@
+PERF itself is proprietary freeware, all rights reserved (see LICENSE). The components
+listed below are not covered by that license and keep their own terms.
+
+LibreHardwareMonitor license and notices: ThirdParty/LibreHardwareMonitor/ in the source
+tree, LibreHardwareMonitor-*.txt next to PERF.exe.
+
+PERF ships an unmodified LibreHardwareMonitorLib 0.9.6 under MPL 2.0.
+Corresponding source:
+https://github.com/LibreHardwareMonitor/LibreHardwareMonitor/tree/3d331e3370efb858411f19511373eff65a218701
+
+DiskInfoToolkit, RAMSPDToolkit-NDD and BlackSharp.Core are also MPL 2.0.
+Source and package versions:
+https://www.nuget.org/packages/DiskInfoToolkit/1.1.2
+https://www.nuget.org/packages/RAMSPDToolkit-NDD/1.4.2
+https://github.com/Blacktempel/BlackSharp
+
+HidSharp includes its copyright notice and license from the NuGet package.
+https://www.nuget.org/packages/HidSharp/2.6.4
+
+Microsoft .NET includes its license and third-party notices from the runtime package.
+Mono.Posix.NETStandard 1.0.0 license: https://go.microsoft.com/fwlink/?linkid=869050
+
+The unmodified, signed PawnIO installer 2.2.0 is redistributed with the author's permission.
+Copyright (C) 2026 namazso. The driver distributed by that installer is GPL-2.0-or-later
+with the upstream device IO-control linking exception. See ThirdParty/PawnIO/COPYING.txt.
+Installer: https://github.com/namazso/PawnIO.Setup/releases/tag/2.2.0
+Driver source and linking exception: https://github.com/namazso/PawnIO/tree/2.2.0

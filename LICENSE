@@ -1,0 +1,42 @@
+PERF - Giấy phép sử dụng phần mềm (phần mềm miễn phí, giữ toàn quyền)
+Bản quyền (c) 2026 tuanphat67. Giữ toàn quyền (All rights reserved).
+
+1. Quyền được cấp
+   Bạn được tải bộ cài PERF chính thức từ trang Releases của dự án và cài,
+   dùng miễn phí trên máy tính của mình, cho mục đích cá nhân hoặc công việc.
+
+2. Những điều không được phép, trừ khi có văn bản đồng ý của tác giả
+   a. Sao chép, sửa đổi, dịch, hay tạo sản phẩm phái sinh từ mã nguồn,
+      tệp cài đặt, hình ảnh, biểu tượng hoặc giao diện của PERF.
+   b. Phân phối lại, đăng tải lại, bán, cho thuê, cấp phép lại PERF hay
+      bất kỳ phần nào của nó, kể cả bản đã chỉnh sửa.
+   c. Dịch ngược, giải mã hay tháo rời phần mềm, trừ khi luật áp dụng
+      cho phép rõ ràng dù có điều khoản này.
+   d. Gỡ bỏ hoặc thay đổi thông tin bản quyền, tên và biểu tượng PERF.
+   Nếu mã nguồn hoặc tài nguyên của PERF xuất hiện ở bất kỳ đâu, việc đó
+   không cấp thêm quyền nào ngoài mục 1.
+
+3. Thành phần bên thứ ba
+   PERF đi kèm các thành phần của bên thứ ba (LibreHardwareMonitorLib và
+   các thư viện liên quan theo MPL-2.0, HidSharp, .NET runtime, bộ cài
+   PawnIO). Các thành phần này giữ nguyên giấy phép riêng và không chịu
+   ràng buộc của giấy phép này. Xem THIRD-PARTY.txt.
+
+4. Không bảo hành
+   PERF được cung cấp "nguyên trạng", không kèm bất kỳ bảo đảm nào. Tác giả
+   không chịu trách nhiệm về thiệt hại phát sinh từ việc sử dụng PERF, kể cả
+   khi thay đổi cấu hình nguồn hay cài driver đi kèm.
+
+5. Chấm dứt
+   Quyền sử dụng tự chấm dứt nếu bạn vi phạm giấy phép này. Khi đó, hãy gỡ
+   PERF khỏi máy.
+
+-------------------------------------------------------------------------------
+English summary: PERF is proprietary freeware. Copyright (c) 2026 tuanphat67.
+All rights reserved. You may download the official installer from the project's
+Releases page and use it free of charge. You may not copy, modify, create
+derivative works from, redistribute, sell, sublicense, or reverse engineer PERF
+or any part of it (source code, installer, artwork, icons) without the author's
+written permission. Seeing any of its source code or assets grants no extra rights.
+Third-party components keep their own licenses (see THIRD-PARTY.txt). PERF is
+provided "AS IS", without warranty of any kind.
