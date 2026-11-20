@@ -1,4 +1,4 @@
-# PERF 0.3.8
+# PERF 0.3.9
 
 <p align="center">
   <img src="docs/images/hero.jpg" alt="PERF with its five themes: PERF Classic, Cosmos, Astronaut, Shinobi and Night Racer" width="100%">
@@ -35,8 +35,8 @@
 | 📊 **Everything at a glance** | CPU, GPU, RAM, storage, fans and pumps, battery and network on one dashboard, with a 1-minute, 10-minute or 1-hour chart and per-moment values on hover. |
 | ⏺️ **Record to CSV** | Click **Record** while you game or render, then open the CSV in Excel to compare sessions. |
 | 🌡️ **Temperature in the tray** | The tray icon shows your CPU temperature live, turning green, amber or red as it nears your warning threshold. |
-| 🔔 **Heat alerts** | Get a Windows notification when the CPU or GPU stays above your threshold. Click it to jump to **Thermals**. |
-| 🪟 **Always-on-top mini overlay** | Sits in a screen corner and is click-through, so it never gets in the way of games or work. Show or hide it from anywhere with **Ctrl + Shift + O**. |
+| 🔔 **Smart alerts** | Get a Windows notification when the CPU or GPU stays above your threshold, the battery runs low or a drive is almost full. |
+| 🪟 **Always-on-top mini overlay** | Sits in a screen corner or anywhere you drag it, on any display, and is click-through, so it never gets in the way of games or work. Show or hide it from anywhere with **Ctrl + Shift + O**. |
 | 🔍 **What's using my PC?** | Click the CPU or RAM tile to see the five apps using the most, grouped by name. |
 | 🎨 **Five illustrated themes** | PERF Classic, Cosmos, Astronaut, Shinobi and Night Racer, each with its own artwork, icon and colour palette. |
 | 🌐 **English and Vietnamese** | Switch the whole interface, overlay and tray menu instantly, no restart needed. |
@@ -101,7 +101,7 @@ Click the **CPU** or **RAM** tile on the Overview page. Below the 60-second char
 
 > Apps running as administrator may be missing while PERF itself runs without admin rights. Enable advanced mode to see them.
 
-## Tray temperature and heat alerts
+## Tray temperature and alerts
 
 - **Live tray icon:** the PERF icon in the system tray becomes a small tile with the current temperature. It follows **Settings → Sampling & alerts → Pinned metric** when that metric is a temperature, otherwise the CPU. Hover it for the exact reading.
 
@@ -112,13 +112,18 @@ Click the **CPU** or **RAM** tile on the Overview page. Below the 60-second char
   | 🔴 Red | At or above the threshold |
 
 - **Heat alerts:** set a **Warning threshold** (40–110 °C) and **Time above threshold** (5–60 s). When the CPU or GPU stays that hot for that long, Windows shows a notification. Click it to open **Thermals**. You get one alert per hot spell; it re-arms after the temperature drops back.
-- Both are on by default. Turn them off with **Show temperature on the tray icon** and **Notify me when the CPU / GPU stays above the threshold**, then click **Save settings**.
+- **Low battery:** on a laptop running on battery, PERF notifies you once when the charge reaches **Low battery alert** (10, 15, 20 or 30%, default 20%). It re-arms after you plug in.
+- **Low disk space:** every minute PERF checks internal drives and notifies you once per drive when free space drops below **Low disk space alert** (5, 10 or 15%, default 10%).
+- Click a battery or disk notification to open the matching details on the Overview page. Set either alert to **Off** to disable it.
+- Temperature alerts and the tray temperature are on by default. Turn them off with **Show temperature on the tray icon** and **Notify me when the CPU / GPU stays above the threshold**, then click **Save settings**.
 
 > Can't see the icon? Windows may hide new tray icons. Open **Windows Settings → Personalization → Taskbar → Other system tray icons** and turn **PERF** on.
 
 ## Mini overlay
 
 A small always-on-top window in the corner of your screen. By default it shows CPU, GPU and RAM usage plus temperatures when available. Choose **Compact rows**, **Horizontal strip** or **Usage bars** and adjust position, size, background opacity and one to three metrics under **Settings → Mini overlay**. **Use theme overlay preset** fills in a layout that matches the current theme.
+
+**Move it anywhere:** click **Move...** next to **Position**. The overlay shows *Drag to move · Esc to cancel*; drag it to any spot, including another display, and let go. The position is saved right away and **Position** switches to **Custom position**. If that display is later disconnected, the overlay returns to the top-right corner. Pick a corner again at any time to go back.
 
 **Hotkey:** press **Ctrl + Shift + O** anywhere, even in a game, to show or hide the overlay. Pick another combination (or **Off**) under **Settings → Mini overlay → Show/hide hotkey**. If the overlay's position is set to **Off**, the hotkey shows it in the top-right corner until you press it again. Clicking **Save settings** returns the overlay to the position you chose. If another app already uses the combination, PERF tells you when you save; pick a different one.
 
