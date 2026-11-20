@@ -1,4 +1,4 @@
-# PERF 0.3.6
+# PERF 0.3.7
 
 <p align="center">
   <img src="docs/images/hero.jpg" alt="PERF with its five themes: PERF Classic, Cosmos, Astronaut, Shinobi and Night Racer" width="100%">
@@ -32,7 +32,8 @@
 
 | | |
 |---|---|
-| 📊 **Everything at a glance** | CPU, GPU, RAM, storage, fans and pumps, battery and network on one dashboard, with a 60-second chart and per-moment values on hover. |
+| 📊 **Everything at a glance** | CPU, GPU, RAM, storage, fans and pumps, battery and network on one dashboard, with a 1-minute, 10-minute or 1-hour chart and per-moment values on hover. |
+| ⏺️ **Record to CSV** | Click **Record** while you game or render, then open the CSV in Excel to compare sessions. |
 | 🌡️ **Temperature in the tray** | The tray icon shows your CPU temperature live, turning green, amber or red as it nears your warning threshold. |
 | 🔔 **Heat alerts** | Get a Windows notification when the CPU or GPU stays above your threshold. Click it to jump to **Thermals**. |
 | 🪟 **Always-on-top mini overlay** | Sits in a screen corner and is click-through, so it never gets in the way of games or work. Show or hide it from anywhere with **Ctrl + Shift + O**. |
@@ -68,6 +69,15 @@ Switch under **Settings → Appearance**, preview instantly, then click **Save s
 </table>
 
 > The theme screenshots use simulated data so every tile is filled. On a real machine, readings depend on the sensors your hardware exposes.
+
+## Chart history and session recording
+
+- **Chart range:** above the chart on the Overview page, pick **1 min**, **10 min** or **1 hour**. PERF keeps the last hour of every sensor in memory from the moment it opens, even while it sits in the tray.
+- **Record:** click **● Record** to start writing every sensor to a CSV file once per sample. The button turns into **■ Stop** with the elapsed time; recording keeps going while PERF is in the tray. Click **Stop** when you're done.
+- **Where the file goes:** `Documents\PERF\PERF-<date>-<time>.csv`. Click **Open folder** under the chart to find it.
+- **File format:** one row per sample with `Time`, `Elapsed (s)` and one column per sensor, named *Device | Sensor (unit)*. Numbers use a dot as the decimal separator. An empty cell means the sensor had no reading at that moment, which is different from a real 0. Sensors that appear after you start recording are not added.
+
+> Tip: record a few minutes of the same game before and after cleaning your fans or repasting the CPU, then compare the `CPU Package (°C)` columns.
 
 ## Top apps
 
@@ -133,7 +143,7 @@ A small always-on-top window in the corner of your screen. By default it shows C
 - Click **X** to send PERF to the system tray; the overlay and the tray temperature keep updating. Double-click the tray icon to bring it back.
 - Pin a GPU or SSD temperature under **Settings → Sampling & alerts → Pinned metric** to show it on the tray icon instead of the CPU.
 - Click the **Fans and pumps** card to see every RPM and PWM channel; **Reset min/max** starts the session statistics over.
-- On the 60-second chart, pick a metric below it and hover to read any moment.
+- On the chart, pick a metric below it and hover to read any moment. Switch to **1 hour** to see a whole gaming session.
 - **Settings → Restore defaults** resets every option and returns your power plan to how it was.
 
 ## FAQ
