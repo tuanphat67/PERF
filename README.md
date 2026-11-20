@@ -1,4 +1,4 @@
-# PERF 0.3.9
+# PERF 0.3.10
 
 <p align="center">
   <img src="docs/images/hero.jpg" alt="PERF with its five themes: PERF Classic, Cosmos, Astronaut, Shinobi and Night Racer" width="100%">
