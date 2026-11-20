@@ -1,4 +1,4 @@
-# PERF 0.3.3
+# PERF 0.3.4
 
 <p align="center">
   <img src="docs/images/hero.jpg" alt="PERF with its five themes: PERF Classic, Cosmos, Astronaut, Shinobi and Night Racer" width="100%">
@@ -36,8 +36,9 @@
 | 🪟 **Always-on-top mini overlay** | Sits in a screen corner and is click-through, so it never gets in the way of games or work. |
 | 🎨 **Five illustrated themes** | PERF Classic, Cosmos, Astronaut, Shinobi and Night Racer, each with its own artwork, icon and colour palette. |
 | 🌐 **English and Vietnamese** | Switch the whole interface, overlay and tray menu instantly, no restart needed. |
+| 🔄 **One-click updates** | The version tag in the corner tells you when a new release is out. Click **Update now** and PERF downloads, verifies and installs it, then reopens. |
 | 🌡️ **Measure and cool down** | Record temperatures for 30 seconds under your real workload. Cap the CPU at 60, 75 or 90% for 10 minutes, then it restores itself. |
-| 🔒 **Honest and safe** | No made-up numbers: sensors that report nothing show *Not available*. PERF sends no data anywhere and never drives your fans. |
+| 🔒 **Honest and safe** | No made-up numbers: sensors that report nothing show *Not available*. PERF collects no personal data and never drives your fans. |
 | 🪶 **Lightweight** | Under 1% CPU while running in the background on our test laptop. Minimises to the system tray. |
 
 ## Five themes
@@ -92,7 +93,7 @@ A small always-on-top window in the corner of your screen. By default it shows C
 
 **Advanced sensors (recommended):** the installer includes the signed **PawnIO** driver, which unlocks extra CPU temperature and power readings. Accept the UAC prompt when asked. If you skipped it, open **Settings → Sensor sources**, click **Install bundled PawnIO**, then quit and reopen PERF.
 
-**Upgrade:** quit PERF (right-click the tray icon → **Exit**) and run the new installer. Your settings are kept.
+**Update:** the version tag at the bottom of the sidebar shows **Latest** or **Update to x.y.z**. Click it, then **Update now**: PERF downloads the new installer from GitHub, checks its SHA-256, closes cleanly, installs and reopens. You can also quit PERF and run a newer installer by hand. Your settings are kept either way.
 
 **Uninstall:** quit PERF, then remove it from **Settings → Apps → Installed apps** in Windows.
 
@@ -129,9 +130,9 @@ No. PERF only reads sensors. The cool-down feature temporarily lowers the maximu
 </details>
 
 <details>
-<summary><b>Does PERF collect my data?</b></summary>
+<summary><b>Does PERF collect my data or phone home?</b></summary>
 
-No. PERF sends nothing over the network. Settings are stored locally in `%LocalAppData%\PERF`.
+No. The only network request PERF makes is a version check against this repository's public GitHub Releases (about 45 seconds after launch, then every 12 hours) and the installer download when you choose to update. No hardware data or personal information is sent. Turn off **Check for updates automatically** in Settings to stop the background check. Settings are stored locally in `%LocalAppData%\PERF`.
 </details>
 
 <details>
