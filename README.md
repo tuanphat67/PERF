@@ -1,7 +1,7 @@
-# PERF 0.3.2
+# PERF 0.3.3
 
 <p align="center">
-  <img src="docs/images/hero.jpg" alt="PERF with its five themes: PERF Classic, Galaxy, Astronaut, Ninja and Racing" width="100%">
+  <img src="docs/images/hero.jpg" alt="PERF with its five themes: PERF Classic, Cosmos, Astronaut, Shinobi and Night Racer" width="100%">
 </p>
 
 <p align="center">
@@ -13,6 +13,7 @@
 <p align="center">
   <a href="https://github.com/tuanphat67/PERF/releases/latest"><img src="https://img.shields.io/github/v/release/tuanphat67/PERF?label=Download&style=for-the-badge&color=22c3e6" alt="Download the latest release"></a>
   <img src="https://img.shields.io/badge/Windows-10%20%7C%2011%20x64-0b0f14?style=for-the-badge&logo=windows" alt="Windows 10 and 11, x64">
+  <img src="https://img.shields.io/badge/Language-English%20%7C%20Ti%E1%BA%BFng%20Vi%E1%BB%87t-0b0f14?style=for-the-badge" alt="English and Vietnamese">
   <img src="https://img.shields.io/badge/Price-Free-8a5cf6?style=for-the-badge" alt="Free">
 </p>
 
@@ -23,7 +24,7 @@
   &nbsp;·&nbsp; <a href="#faq">FAQ</a>
 </p>
 
-> **Interface language:** the app UI is currently in Vietnamese. Menu names below are given in English with the on-screen Vietnamese label in brackets.
+> **English and Vietnamese:** PERF picks English or Vietnamese from your Windows display language on first launch. Switch any time under **Settings → Appearance → Language**.
 
 ---
 
@@ -33,14 +34,15 @@
 |---|---|
 | 📊 **Everything at a glance** | CPU, GPU, RAM, storage, fans and pumps, battery and network on one dashboard, with a 60-second chart and per-moment values on hover. |
 | 🪟 **Always-on-top mini overlay** | Sits in a screen corner and is click-through, so it never gets in the way of games or work. |
-| 🎨 **Five illustrated themes** | PERF Classic, Galaxy, Astronaut, Ninja and Racing, each with its own artwork, icon and colour palette. |
+| 🎨 **Five illustrated themes** | PERF Classic, Cosmos, Astronaut, Shinobi and Night Racer, each with its own artwork, icon and colour palette. |
+| 🌐 **English and Vietnamese** | Switch the whole interface, overlay and tray menu instantly, no restart needed. |
 | 🌡️ **Measure and cool down** | Record temperatures for 30 seconds under your real workload. Cap the CPU at 60, 75 or 90% for 10 minutes, then it restores itself. |
 | 🔒 **Honest and safe** | No made-up numbers: sensors that report nothing show *Not available*. PERF sends no data anywhere and never drives your fans. |
 | 🪶 **Lightweight** | Under 1% CPU while running in the background on our test laptop. Minimises to the system tray. |
 
 ## Five themes
 
-Switch under **Settings → Appearance** (*Cài đặt → Giao diện*), preview instantly, then click **Save settings** (*Lưu cài đặt*).
+Switch under **Settings → Appearance**, preview instantly, then click **Save settings**. The language selector lives in the same panel.
 
 <p align="center">
   <img src="docs/images/theme-picker.png" alt="Theme picker in Settings" width="820">
@@ -48,12 +50,12 @@ Switch under **Settings → Appearance** (*Cài đặt → Giao diện*), previe
 
 <table>
   <tr>
-    <td width="50%"><img src="docs/images/theme-galaxy.jpg" alt="Galaxy theme"><br><b>🪐 Galaxy</b> (<i>Vũ trụ</i>): a ringed gas giant, violet nebula and a deep star field.</td>
-    <td width="50%"><img src="docs/images/theme-astronaut.jpg" alt="Astronaut theme"><br><b>👨‍🚀 Astronaut</b> (<i>Phi hành gia</i>): Earth's night-side horizon seen from a space station.</td>
+    <td width="50%"><img src="docs/images/theme-cosmos.jpg" alt="Cosmos theme"><br><b>🪐 Cosmos</b>: a ringed gas giant, violet nebula and a deep star field.</td>
+    <td width="50%"><img src="docs/images/theme-astronaut.jpg" alt="Astronaut theme"><br><b>👨‍🚀 Astronaut</b>: Earth's night-side horizon seen from a space station.</td>
   </tr>
   <tr>
-    <td><img src="docs/images/theme-ninja.jpg" alt="Ninja theme"><br><b>🥷 Ninja</b> (<i>Nhẫn giả</i>): a full moon over a misty pagoda and bamboo.</td>
-    <td><img src="docs/images/theme-racing.jpg" alt="Racing theme"><br><b>🏎️ Racing</b> (<i>Xe đua</i>): a rain-soaked night circuit streaked with tail lights.</td>
+    <td><img src="docs/images/theme-shinobi.jpg" alt="Shinobi theme"><br><b>🥷 Shinobi</b>: a full moon over a misty pagoda and bamboo.</td>
+    <td><img src="docs/images/theme-night-racer.jpg" alt="Night Racer theme"><br><b>🏎️ Night Racer</b>: a rain-soaked night circuit streaked with tail lights.</td>
   </tr>
   <tr>
     <td><img src="docs/images/theme-classic.jpg" alt="PERF Classic theme"><br><b>📈 PERF Classic</b>: glowing circuit traces and a cyan oscilloscope wave.</td>
@@ -65,7 +67,7 @@ Switch under **Settings → Appearance** (*Cài đặt → Giao diện*), previe
 
 ## Mini overlay
 
-A small always-on-top window in the corner of your screen. By default it shows CPU, GPU and RAM usage plus temperatures when available. Choose a **list**, **strip** or **load bar** layout and adjust position, size, background opacity and one to three metrics under **Settings → Mini overlay** (*Cửa sổ theo dõi nhỏ*). **Use theme overlay preset** (*Dùng mẫu cửa sổ nhỏ của chủ đề*) fills in a layout that matches the current theme.
+A small always-on-top window in the corner of your screen. By default it shows CPU, GPU and RAM usage plus temperatures when available. Choose **Compact rows**, **Horizontal strip** or **Usage bars** and adjust position, size, background opacity and one to three metrics under **Settings → Mini overlay**. **Use theme overlay preset** fills in a layout that matches the current theme.
 
 <p align="center">
   <img src="docs/images/overlays.png" alt="The three overlay layouts in all five themes" width="100%">
@@ -77,8 +79,8 @@ A small always-on-top window in the corner of your screen. By default it shows C
 
 - **Temperature check:** start a measurement while a game or heavy task is running. PERF records the starting, current and peak temperature over 30 seconds. It never generates load on its own.
 - **Temporary CPU cool-down:** cap the maximum processor state at **60%, 75% or 90%** for 10 minutes, on both AC and battery power.
-- **Always reverted:** PERF edits a copy of your power plan and restores the original when time runs out or when you quit, even after a crash or power loss. **Restore previous power plan** (*Trả về cấu hình nguồn trước đó*) undoes it immediately.
-- **Fans and pumps:** the **Fans and pumps** (*Quạt và bơm*) card shows every RPM and PWM channel your machine reports. Fans stay under firmware or vendor-software control. On Lenovo laptops, PERF also reads fan speed through Lenovo WMI.
+- **Always reverted:** PERF edits a copy of your power plan and restores the original when time runs out or when you quit, even after a crash or power loss. **Restore previous power plan** undoes it immediately.
+- **Fans and pumps:** the **Fans and pumps** card shows every RPM and PWM channel your machine reports. Fans stay under firmware or vendor-software control. On Lenovo laptops, PERF also reads fan speed through Lenovo WMI.
 
 <br clear="right">
 
@@ -88,9 +90,9 @@ A small always-on-top window in the corner of your screen. By default it shows C
 2. Run the installer. The .NET runtime is bundled, so nothing else is needed.
 3. Launch **PERF** from the Start menu. The main window and the mini overlay appear right away.
 
-**Advanced sensors (recommended):** the installer includes the signed **PawnIO** driver, which unlocks extra CPU temperature and power readings. Accept the UAC prompt when asked. If you skipped it, open **Settings → Sensor sources** (*Cài đặt → Nguồn cảm biến*), click **Install bundled PawnIO** (*Cài PawnIO đi kèm*), then quit and reopen PERF.
+**Advanced sensors (recommended):** the installer includes the signed **PawnIO** driver, which unlocks extra CPU temperature and power readings. Accept the UAC prompt when asked. If you skipped it, open **Settings → Sensor sources**, click **Install bundled PawnIO**, then quit and reopen PERF.
 
-**Upgrade:** quit PERF (right-click the tray icon → **Exit** / *Thoát*) and run the new installer. Your settings are kept.
+**Upgrade:** quit PERF (right-click the tray icon → **Exit**) and run the new installer. Your settings are kept.
 
 **Uninstall:** quit PERF, then remove it from **Settings → Apps → Installed apps** in Windows.
 
@@ -102,9 +104,9 @@ A small always-on-top window in the corner of your screen. By default it shows C
 ## Tips
 
 - Click **X** to send PERF to the system tray; the overlay keeps updating. Double-click the tray icon to bring it back.
-- Click the **Fans and pumps** card to see every RPM and PWM channel; **Reset min/max** (*Đặt lại min/max*) starts the session statistics over.
+- Click the **Fans and pumps** card to see every RPM and PWM channel; **Reset min/max** starts the session statistics over.
 - On the 60-second chart, pick a metric below it and hover to read any moment.
-- **Settings → Restore defaults** (*Khôi phục mặc định*) resets every option and returns your power plan to how it was.
+- **Settings → Restore defaults** resets every option and returns your power plan to how it was.
 
 ## FAQ
 
@@ -115,7 +117,7 @@ Usually because the machine only has integrated graphics (for example Intel UHD 
 </details>
 
 <details>
-<summary><b>Why do some tiles say "Not available" (<i>Chưa đọc được</i>)?</b></summary>
+<summary><b>Why do some tiles say "Not available"?</b></summary>
 
 Your drivers or firmware don't expose that reading. Installing **PawnIO** and allowing advanced mode unlocks more CPU temperature and power sensors. Some GPU, SSD and fan readings still depend on the device.
 </details>
