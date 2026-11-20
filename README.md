@@ -1,4 +1,4 @@
-# PERF 0.3.4
+# PERF 0.3.5
 
 <p align="center">
   <img src="docs/images/hero.jpg" alt="PERF with its five themes: PERF Classic, Cosmos, Astronaut, Shinobi and Night Racer" width="100%">
@@ -33,10 +33,12 @@
 | | |
 |---|---|
 | 📊 **Everything at a glance** | CPU, GPU, RAM, storage, fans and pumps, battery and network on one dashboard, with a 60-second chart and per-moment values on hover. |
+| 🌡️ **Temperature in the tray** | The tray icon shows your CPU temperature live, turning green, amber or red as it nears your warning threshold. |
+| 🔔 **Heat alerts** | Get a Windows notification when the CPU or GPU stays above your threshold. Click it to jump to **Thermals**. |
 | 🪟 **Always-on-top mini overlay** | Sits in a screen corner and is click-through, so it never gets in the way of games or work. |
 | 🎨 **Five illustrated themes** | PERF Classic, Cosmos, Astronaut, Shinobi and Night Racer, each with its own artwork, icon and colour palette. |
 | 🌐 **English and Vietnamese** | Switch the whole interface, overlay and tray menu instantly, no restart needed. |
-| 🔄 **One-click updates** | The version tag in the corner tells you when a new release is out. Click **Update now** and PERF downloads, verifies and installs it, then reopens. |
+| 🔄 **One-click updates** | The version tag in the corner tells you when a new release is out and what's new in it. Click **Update now** and PERF downloads, verifies and installs it, then reopens. |
 | 🌡️ **Measure and cool down** | Record temperatures for 30 seconds under your real workload. Cap the CPU at 60, 75 or 90% for 10 minutes, then it restores itself. |
 | 🔒 **Honest and safe** | No made-up numbers: sensors that report nothing show *Not available*. PERF collects no personal data and never drives your fans. |
 | 🪶 **Lightweight** | Under 1% CPU while running in the background on our test laptop. Minimises to the system tray. |
@@ -66,6 +68,21 @@ Switch under **Settings → Appearance**, preview instantly, then click **Save s
 
 > The theme screenshots use simulated data so every tile is filled. On a real machine, readings depend on the sensors your hardware exposes.
 
+## Tray temperature and heat alerts
+
+- **Live tray icon:** the PERF icon in the system tray becomes a small tile with the current temperature. It follows **Settings → Sampling & alerts → Pinned metric** when that metric is a temperature, otherwise the CPU. Hover it for the exact reading.
+
+  | Colour | Meaning |
+  |---|---|
+  | 🟢 Green | Below *threshold − 5 °C* |
+  | 🟡 Amber | Within 5 °C of the threshold |
+  | 🔴 Red | At or above the threshold |
+
+- **Heat alerts:** set a **Warning threshold** (40–110 °C) and **Time above threshold** (5–60 s). When the CPU or GPU stays that hot for that long, Windows shows a notification. Click it to open **Thermals**. You get one alert per hot spell; it re-arms after the temperature drops back.
+- Both are on by default. Turn them off with **Show temperature on the tray icon** and **Notify me when the CPU / GPU stays above the threshold**, then click **Save settings**.
+
+> Can't see the icon? Windows may hide new tray icons. Open **Windows Settings → Personalization → Taskbar → Other system tray icons** and turn **PERF** on.
+
 ## Mini overlay
 
 A small always-on-top window in the corner of your screen. By default it shows CPU, GPU and RAM usage plus temperatures when available. Choose **Compact rows**, **Horizontal strip** or **Usage bars** and adjust position, size, background opacity and one to three metrics under **Settings → Mini overlay**. **Use theme overlay preset** fills in a layout that matches the current theme.
@@ -93,7 +110,7 @@ A small always-on-top window in the corner of your screen. By default it shows C
 
 **Advanced sensors (recommended):** the installer includes the signed **PawnIO** driver, which unlocks extra CPU temperature and power readings. Accept the UAC prompt when asked. If you skipped it, open **Settings → Sensor sources**, click **Install bundled PawnIO**, then quit and reopen PERF.
 
-**Update:** the version tag at the bottom of the sidebar shows **Latest** or **Update to x.y.z**. Click it, then **Update now**: PERF downloads the new installer from GitHub, checks its SHA-256, closes cleanly, installs and reopens. You can also quit PERF and run a newer installer by hand. Your settings are kept either way.
+**Update:** the version tag at the bottom of the sidebar shows **Latest** or **Update to x.y.z**. When PERF finds a new version in the background it also shows a notification; click it to open the update dialog. The dialog lists **What's new** in your language. Click **Update now**: PERF downloads the new installer from GitHub, checks its SHA-256, closes cleanly, installs and reopens. You can also quit PERF and run a newer installer by hand. Your settings are kept either way.
 
 **Uninstall:** quit PERF, then remove it from **Settings → Apps → Installed apps** in Windows.
 
@@ -104,7 +121,8 @@ A small always-on-top window in the corner of your screen. By default it shows C
 
 ## Tips
 
-- Click **X** to send PERF to the system tray; the overlay keeps updating. Double-click the tray icon to bring it back.
+- Click **X** to send PERF to the system tray; the overlay and the tray temperature keep updating. Double-click the tray icon to bring it back.
+- Pin a GPU or SSD temperature under **Settings → Sampling & alerts → Pinned metric** to show it on the tray icon instead of the CPU.
 - Click the **Fans and pumps** card to see every RPM and PWM channel; **Reset min/max** starts the session statistics over.
 - On the 60-second chart, pick a metric below it and hover to read any moment.
 - **Settings → Restore defaults** resets every option and returns your power plan to how it was.
