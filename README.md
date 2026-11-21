@@ -162,14 +162,34 @@ A small always-on-top window in the corner of your screen. By default it shows C
 
 <img src="docs/images/installer.png" alt="PERF installer with install folder and Browse button" width="420" align="right">
 
-1. Download `PERF-<version>-x64.msi` from [**Releases**](https://github.com/tuanphat67/PERF/releases/latest).
-2. Run the installer. It installs for your Windows account only, and the .NET runtime is bundled, so nothing else is needed.
+1. **Download** `PERF-<version>-x64.msi` from [**Releases**](https://github.com/tuanphat67/PERF/releases/latest) (under **Assets**). This is the only official source.
+2. **Run the installer.** Windows will most likely warn you first, because the installer is not code-signed yet. Follow [Get past the Windows warning](#get-past-the-windows-warning) below, then continue here. PERF installs for your Windows account only, and the .NET runtime is bundled, so nothing else is needed.
 3. **Choose where to install:** keep the default `%LocalAppData%\Programs\PERF` or click **Browse...** to pick another folder (for example on drive D:) in the standard Windows folder picker. Pick a folder your account can write to; Program Files needs administrator rights.
 4. On the last screen, leave **Open PERF now** ticked to start PERF right away, or untick it and launch **PERF** from the Start menu later.
 
 <br clear="right">
 
 Updates, including one-click updates from inside PERF, install to the same folder you chose. Running the installer again on a PC that already has PERF offers **Repair** or **Remove**.
+
+### Get past the Windows warning
+
+PERF is free and not code-signed (a signing certificate costs money every year), so Windows SmartScreen does not recognise the installer yet. You only need to allow **this one file**; there is no need to turn SmartScreen off for your whole PC.
+
+**If your browser blocks the download** (Microsoft Edge: *"PERF-…msi isn't commonly downloaded"*):
+1. In the downloads list, hover over the file and click **⋯ (More actions)** → **Keep**.
+2. Click **Show more** → **Keep anyway**.
+
+In Chrome, click **Keep** (or **⋮ → Download dangerous file**) in the download bar.
+
+**If a blue "Windows protected your PC" window appears when you open the installer:**
+1. Click **More info**.
+2. Check that it says *File: PERF-<version>-x64.msi*, then click **Run anyway**.
+
+**Alternative (before opening the file):** right-click the downloaded `.msi` → **Properties** → at the bottom of the **General** tab tick **Unblock** → **OK**. Windows then opens it without the SmartScreen window.
+
+> **Why not turn SmartScreen off completely?** It also protects you from real malware in other downloads. Allowing just the PERF installer gets the same result without leaving your PC unprotected. If you already turned it off, you can switch it back on in **Windows Security → App & browser control → Reputation-based protection**.
+
+> **Smart App Control (Windows 11):** if Windows says *"Smart App Control blocked an app that may be unsafe"* and offers no **Run anyway** button, Smart App Control is on. It blocks every unsigned installer and cannot be bypassed per file. Check it in **Windows Security → App & browser control → Smart App Control settings**. Turning it off is a one-way switch (turning it back on needs a Windows reset), so only do it if you are comfortable with that.
 
 **Advanced sensors (recommended):** the installer includes the signed **PawnIO** driver, which unlocks extra CPU temperature and power readings. Keep **Install the PawnIO driver** ticked on the first screen and accept the UAC prompt when asked. The option is hidden when PawnIO is already installed. If you skipped it, open **Settings → Sensor sources**, click **Install bundled PawnIO**, then quit and reopen PERF.
 
@@ -225,7 +245,7 @@ No. The only network request PERF makes is a version check against this reposito
 <details>
 <summary><b>Windows SmartScreen warns about the installer</b></summary>
 
-The PERF installer is not code-signed yet, so Windows may show a warning. Only download PERF from the official Releases page. If you trust the file, choose **More info → Run anyway**.
+The PERF installer is not code-signed yet, so Windows may show a warning. Only download PERF from the official Releases page, then allow just that file: see [Get past the Windows warning](#get-past-the-windows-warning) for Edge, Chrome, the blue SmartScreen window and Smart App Control.
 </details>
 
 <details>
