@@ -1,4 +1,4 @@
-# PERF 0.3.11
+# PERF 0.3.12
 
 <p align="center">
   <img src="docs/images/hero.jpg" alt="PERF with its five themes: PERF Classic, Cosmos, Astronaut, Shinobi and Night Racer" width="100%">
@@ -207,7 +207,7 @@ Your drivers or firmware don't expose that reading. Installing **PawnIO** and al
 <details>
 <summary><b>How do I report a problem?</b></summary>
 
-Open **Settings → Sensor sources** and click **Copy diagnostic report**. It copies the PERF and Windows versions, sensor sources and current readings, with no machine name, user name or file paths. Paste it into a new issue on [GitHub Issues](https://github.com/tuanphat67/PERF/issues) together with what you expected and what happened.
+Open **Settings → Sensor sources** and click **Copy diagnostic report**. It copies the PERF and Windows versions, sensor sources, current readings and the last 40 lines of PERF's error log, with your user name, machine name and user-folder path removed. Paste it into a new issue on [GitHub Issues](https://github.com/tuanphat67/PERF/issues) together with what you expected and what happened.
 </details>
 
 <details>
@@ -219,7 +219,7 @@ No. PERF only reads sensors. The cool-down feature temporarily lowers the maximu
 <details>
 <summary><b>Does PERF collect my data or phone home?</b></summary>
 
-No. The only network request PERF makes is a version check against this repository's public GitHub Releases (about 45 seconds after launch, then every 12 hours) and the installer download when you choose to update. No hardware data or personal information is sent. Turn off **Check for updates automatically** in Settings to stop the background check. Settings are stored locally in `%LocalAppData%\PERF`.
+No. The only network request PERF makes is a version check against this repository's public GitHub Releases (about 45 seconds after launch, then every 12 hours) and the installer download when you choose to update. No hardware data or personal information is sent. Turn off **Check for updates automatically** in Settings to stop the background check. Settings are stored locally in `%LocalAppData%\PERF`. PERF also keeps a small local error log in `%LocalAppData%\PERF\logs` (at most about 1 MB, user name and paths removed) that never leaves your PC unless you paste a diagnostic report yourself.
 </details>
 
 <details>
