@@ -1,4 +1,4 @@
-# PERF 0.3.13
+# PERF 0.4.0
 
 <p align="center">
   <img src="docs/images/hero.jpg" alt="PERF with its five themes: PERF Classic, Cosmos, Astronaut, Shinobi and Night Racer" width="100%">
@@ -42,6 +42,7 @@
 | 🎨 **Five illustrated themes** | PERF Classic, Cosmos, Astronaut, Shinobi and Night Racer, each with its own artwork, icon and colour palette. |
 | 🌐 **English and Vietnamese** | Switch the whole interface, overlay and tray menu instantly, no restart needed. |
 | 🔄 **One-click updates** | The version tag in the corner tells you when a new release is out and what's new in it. Click **Update now** and PERF downloads, verifies and installs it, then reopens. |
+| ❤️ **PC health** | See when Windows slows your CPU down and why (heat, battery or power limits), check every drive's health, see how much capacity your laptop battery has left, and compare the last 7 days. |
 | 🌡️ **Measure and cool down** | Record temperatures for 30 seconds under your real workload. Cap the CPU at 60, 75 or 90% for 10 minutes, then it restores itself. |
 | 🔒 **Honest and safe** | No made-up numbers: sensors that report nothing show *Not available*. PERF collects no personal data and never drives your fans. |
 | 🪶 **Lightweight** | Under 1% CPU while running in the background on our test laptop. Minimises to the system tray. |
@@ -157,6 +158,15 @@ A small always-on-top window in the corner of your screen. By default it shows C
 - **Fans and pumps:** the **Fans and pumps** card shows every RPM and PWM channel your machine reports. Fans stay under firmware or vendor-software control. On Lenovo laptops, PERF also reads fan speed through Lenovo WMI.
 
 <br clear="right">
+
+## PC health
+
+The **Health** page answers "is my PC OK?" without administrator rights:
+
+- **CPU performance:** how much of its maximum performance Windows currently lets the CPU use, plus the effective clock speed. When this drops while the CPU is busy for a few seconds, PERF logs a **slowdown** with the time, how long it lasted, the lowest level and the likely cause: high temperature, battery or power saving, or a power limit / power plan. PERF's own CPU cool-down is never counted.
+- **Drive health:** every physical drive with the status Windows reports (**Healthy**, **Warning**, **Failing**). If a drive reports a problem, PERF notifies you once so you can back up. Wear in percent appears when advanced sensors are on.
+- **Battery health (laptops):** how much of its design capacity the battery still holds, with the full-charge and design capacity.
+- **Last 7 days:** for each day PERF was running, the highest CPU and GPU temperature, average CPU load, number and total length of slowdowns, and time on battery. The summary is stored only on your PC (`%LocalAppData%\PERF\history.json`, last 30 days).
 
 ## Install in one minute
 
