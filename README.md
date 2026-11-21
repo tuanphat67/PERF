@@ -1,4 +1,4 @@
-# PERF 0.3.10
+# PERF 0.3.11
 
 <p align="center">
   <img src="docs/images/hero.jpg" alt="PERF with its five themes: PERF Classic, Cosmos, Astronaut, Shinobi and Night Racer" width="100%">
@@ -37,7 +37,8 @@
 | 🌡️ **Temperature in the tray** | The tray icon shows your CPU temperature live, turning green, amber or red as it nears your warning threshold. |
 | 🔔 **Smart alerts** | Get a Windows notification when the CPU or GPU stays above your threshold, the battery runs low or a drive is almost full. |
 | 🪟 **Always-on-top mini overlay** | Sits in a screen corner or anywhere you drag it, on any display, and is click-through, so it never gets in the way of games or work. Show or hide it from anywhere with **Ctrl + Shift + O**. |
-| 🔍 **What's using my PC?** | Click the CPU or RAM tile to see the five apps using the most, grouped by name. |
+| 🔍 **What's using my PC?** | Click the CPU, GPU or RAM tile to see the five apps using the most, grouped by name. |
+| 🎮 **Quick profiles** | Right-click the tray icon to switch between **Gaming** (overlay on, recording) and **Work** (overlay off). |
 | 🎨 **Five illustrated themes** | PERF Classic, Cosmos, Astronaut, Shinobi and Night Racer, each with its own artwork, icon and colour palette. |
 | 🌐 **English and Vietnamese** | Switch the whole interface, overlay and tray menu instantly, no restart needed. |
 | 🔄 **One-click updates** | The version tag in the corner tells you when a new release is out and what's new in it. Click **Update now** and PERF downloads, verifies and installs it, then reopens. |
@@ -97,9 +98,24 @@ Open **Settings → Storage** to choose where PERF saves files, then click **Sav
 
 ## Top apps
 
-Click the **CPU** or **RAM** tile on the Overview page. Below the 60-second chart, **Top apps by CPU** or **Top apps by RAM** lists the five apps using the most right now. Processes with the same name are added together (a browser with 20 helper processes shows as one row, marked *×20*). PERF only measures processes while this card is on screen.
+Click the **CPU**, **GPU** or **RAM** tile on the Overview page. Below the chart, **Top apps by CPU**, **Top apps by GPU** or **Top apps by RAM** lists the five apps using the most right now. GPU usage comes from the same Windows counters Task Manager uses; for each app PERF shows its busiest GPU engine (3D, video decode and so on). Processes with the same name are added together (a browser with 20 helper processes shows as one row, marked *×20*). PERF only measures processes while this card is on screen.
 
 > Apps running as administrator may be missing while PERF itself runs without admin rights. Enable advanced mode to see them.
+
+## Quick profiles
+
+Right-click the PERF tray icon and pick a profile. The active one has a tick.
+
+| Profile | What it does |
+|---|---|
+| **Gaming** | Shows the mini overlay (top right if it was off, CPU/GPU/RAM if no metric was chosen), turns heat alerts on and starts **recording** to CSV. |
+| **Work** | Hides the mini overlay and stops recording. |
+
+A notification confirms the switch. Changing settings by hand and clicking **Save settings** clears the tick.
+
+## First-run tour
+
+The first time you open PERF 0.3.11 or later, a four-step tour shows the Overview, the mini overlay and its hotkey, the tray and alerts, and where to customise PERF. **Skip** closes it; replay it any time from **Settings → Startup → Replay quick tour**.
 
 ## Tray temperature and alerts
 
@@ -123,7 +139,7 @@ Click the **CPU** or **RAM** tile on the Overview page. Below the 60-second char
 
 A small always-on-top window in the corner of your screen. By default it shows CPU, GPU and RAM usage plus temperatures when available. Choose **Compact rows**, **Horizontal strip** or **Usage bars** and adjust position, size, background opacity and one to three metrics under **Settings → Mini overlay**. **Use theme overlay preset** fills in a layout that matches the current theme.
 
-**Move it anywhere:** click **Move...** next to **Position**. The overlay shows *Drag to move · Esc to cancel*; drag it to any spot, including another display, and let go. The position is saved right away and **Position** switches to **Custom position**. If that display is later disconnected, the overlay returns to the top-right corner. Pick a corner again at any time to go back.
+**Move it anywhere:** click **Move...** next to **Position**. The overlay jumps to the middle of the display that shows the PERF window and says *Drag to move*. Drag it as many times as you like, including onto another display; it snaps to the screen edges when you get close. Then click **Done** (the Move button changes to Done), double-click the overlay or press **Enter** to save. **Esc** puts it back where it was. **Position** switches to **Custom position**. If that display is later disconnected, the overlay returns to the top-right corner. Pick a corner again at any time to go back.
 
 **Hotkey:** press **Ctrl + Shift + O** anywhere, even in a game, to show or hide the overlay. Pick another combination (or **Off**) under **Settings → Mini overlay → Show/hide hotkey**. If the overlay's position is set to **Off**, the hotkey shows it in the top-right corner until you press it again. Clicking **Save settings** returns the overlay to the position you chose. If another app already uses the combination, PERF tells you when you save; pick a different one.
 
