@@ -1,4 +1,4 @@
-# PERF 0.4.0
+# PERF 0.5.0
 
 <p align="center">
   <img src="docs/images/hero.jpg" alt="PERF with its five themes: PERF Classic, Cosmos, Astronaut, Shinobi and Night Racer" width="100%">
@@ -138,7 +138,7 @@ The first time you open PERF 0.3.11 or later, a four-step tour shows the Overvie
 
 ## Mini overlay
 
-A small always-on-top window in the corner of your screen. By default it shows CPU, GPU and RAM usage plus temperatures when available. Choose **Compact rows**, **Horizontal strip** or **Usage bars** and adjust position, size, background opacity and one to three metrics under **Settings → Mini overlay**. **Use theme overlay preset** fills in a layout that matches the current theme.
+A small always-on-top window in the corner of your screen. By default it shows CPU, GPU and RAM usage plus temperatures when available. Choose **Compact rows**, **Horizontal strip** or **Usage bars** and adjust position, size and background opacity under **Settings → Mini overlay**. **Metrics** is a list you can change freely: **+ Add metric** adds one (each kind once, up to all nine), **↑** moves it up and **✕** removes it. The overlay resizes itself for however many you pick: rows and usage bars grow one line per metric, and the horizontal strip wraps into two rows after four. **Use theme overlay preset** fills in a layout that matches the current theme.
 
 **Move it anywhere:** click **Move...** next to **Position**. The overlay jumps to the middle of the display that shows the PERF window and says *Drag to move*. Drag it as many times as you like, including onto another display; it snaps to the screen edges when you get close. Then click **Done** (the Move button changes to Done), double-click the overlay or press **Enter** to save. **Esc** puts it back where it was. **Position** switches to **Custom position**. If that display is later disconnected, the overlay returns to the top-right corner. Pick a corner again at any time to go back.
 
@@ -173,8 +173,8 @@ The **Health** page answers "is my PC OK?" without administrator rights:
 <img src="docs/images/installer.png" alt="PERF installer with install folder and Browse button" width="420" align="right">
 
 1. **Download** `PERF-<version>-x64.msi` from [**Releases**](https://github.com/tuanphat67/PERF/releases/latest) (under **Assets**). This is the only official source.
-2. **Run the installer.** Windows will most likely warn you first, because the installer is not code-signed yet. Follow [Get past the Windows warning](#get-past-the-windows-warning) below, then continue here. PERF installs for your Windows account only, and the .NET runtime is bundled, so nothing else is needed.
-3. **Choose where to install:** keep the default `%LocalAppData%\Programs\PERF` or click **Browse...** to pick another folder (for example on drive D:) in the standard Windows folder picker. Pick a folder your account can write to; Program Files needs administrator rights.
+2. **Run the installer.** Windows will most likely warn you first, because the installer is not code-signed yet. Follow [Get past the Windows warning](#get-past-the-windows-warning) below, then continue here. PERF installs for every account on this PC, so Windows asks for administrator approval once. The .NET runtime is bundled, so nothing else is needed.
+3. **Choose where to install:** keep the default `C:\Program Files\PERF` (recommended) or click **Browse...** to pick another folder. Advanced sensors without a UAC prompt only work from a folder normal apps cannot change, such as Program Files.
 4. On the last screen, leave **Open PERF now** ticked to start PERF right away, or untick it and launch **PERF** from the Start menu later.
 
 <br clear="right">
@@ -202,6 +202,8 @@ In Chrome, click **Keep** (or **⋮ → Download dangerous file**) in the downlo
 > **Smart App Control (Windows 11):** if Windows says *"Smart App Control blocked an app that may be unsafe"* and offers no **Run anyway** button, Smart App Control is on. It blocks every unsigned installer and cannot be bypassed per file. Check it in **Windows Security → App & browser control → Smart App Control settings**. Turning it off is a one-way switch (turning it back on needs a Windows reset), so only do it if you are comfortable with that.
 
 **Advanced sensors (recommended):** the installer includes the signed **PawnIO** driver, which unlocks extra CPU temperature and power readings. Keep **Install the PawnIO driver** ticked on the first screen and accept the UAC prompt when asked. The option is hidden when PawnIO is already installed. If you skipped it, open **Settings → Sensor sources**, click **Install bundled PawnIO**, then quit and reopen PERF.
+
+**Advanced sensors without a UAC prompt:** open **Settings → Sensor sources → No UAC prompt** and click **Turn on**. Windows asks for approval once; after that a small helper task reads CPU temperature, power and fan speed with administrator rights while the PERF window itself runs normally. The helper only starts when PERF asks for it, answers only PERF, and stops when PERF closes. **Turn off** removes it. If PERF was installed for your account only (before 0.5.0), the same place offers **Install for all users**, which moves PERF to Program Files and keeps your settings.
 
 **Update:** the version tag at the bottom of the sidebar shows **Latest** or **Update to x.y.z**. When PERF finds a new version in the background it also shows a notification; click it to open the update dialog. The dialog lists **What's new** in your language. Click **Update now**: PERF downloads the new installer from GitHub, checks its SHA-256, closes cleanly, installs and reopens. You can also quit PERF and run a newer installer by hand. Your settings are kept either way.
 
