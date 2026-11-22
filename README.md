@@ -1,4 +1,4 @@
-# PERF 0.5.0
+# PERF 0.5.1
 
 <p align="center">
   <img src="docs/images/hero.jpg" alt="PERF with its five themes: PERF Classic, Cosmos, Astronaut, Shinobi and Night Racer" width="100%">
@@ -75,9 +75,11 @@ Switch under **Settings → Appearance**, preview instantly, then click **Save s
 ## Chart history and session recording
 
 - **Chart range:** above the chart on the Overview page, pick **1 min**, **10 min** or **1 hour**. PERF keeps the last hour of every sensor in memory from the moment it opens, even while it sits in the tray.
-- **Record:** click **● Record** to start writing every sensor to a CSV file once per sample. The button turns into **■ Stop** with the elapsed time; recording keeps going while PERF is in the tray. Click **Stop** when you're done.
-- **Where the file goes:** `Documents\PERF\PERF-<date>-<time>.csv` by default. Click **Open folder** under the chart to find it, or pick another folder under **Settings → Storage**.
-- **File format:** one row per sample with `Time`, `Elapsed (s)` and one column per sensor, named *Device | Sensor (unit)*. Numbers use a dot as the decimal separator. An empty cell means the sensor had no reading at that moment, which is different from a real 0. Sensors that appear after you start recording are not added.
+- **Choose what to record:** click **▾** next to **● Record** and tick the groups you care about (CPU, GPU, RAM, storage, fans, network…). **Main metrics** records what the Overview tiles show (usage, temperature, power, clock); **Every sensor in the group** records everything. PERF remembers the choice; by default it records CPU, GPU and RAM main metrics.
+- **Record:** click **● Record** to start. The button turns into **■ Stop** with the elapsed time; recording keeps going while PERF is in the tray. Click **Stop** when you're done.
+- **Report:** when you stop, PERF makes an HTML report next to the CSV and shows **View report**. It opens in any browser, works offline and is a single file you can share: for each metric the low, average and high values, a chart over the session (line = average, shaded = low–high range, gaps = no reading) and, for CPU/GPU temperatures, how long they stayed at or above your warning threshold.
+- **Where the file goes:** `Documents\PERF\PERF-<date>-<time>.csv` (and `.html` for the report) by default. Click **Open folder** under the chart to find it, or pick another folder under **Settings → Storage**.
+- **CSV format:** one row per sample with the time, the elapsed seconds and one column per recorded metric, named like *CPU · Package temperature (°C)*. Numbers use a dot as the decimal separator. An empty cell means the sensor had no reading at that moment, which is different from a real 0. Sensors that appear after you start recording are not added.
 
 > Tip: record a few minutes of the same game before and after cleaning your fans or repasting the CPU, then compare the `CPU Package (°C)` columns.
 
